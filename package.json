@@ -1,0 +1,25 @@
+{
+  "name": "messingwithoauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/server.js",
+    "backend": "nodemon server/server.js",
+    "frontend": "npm run front --prefix client",
+    "dev": "concurrently \"npm run backend\" \"npm run start --prefix client\"",
+    "heroku-postbuild": "npm install --prefix client &&  npm install --prefix server && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinafarheidar/messingWithOauth.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sinafarheidar/messingWithOauth/issues"
+  },
+  "homepage": "https://github.com/sinafarheidar/messingWithOauth#readme"
+}
